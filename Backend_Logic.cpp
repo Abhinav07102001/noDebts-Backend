@@ -43,16 +43,16 @@ class IndividualExpense{
         this->borrower=borrower;
     }
 
-    void displayExpense(){
-        cout<<"id -> "<<id<<endl;
-        cout<<"totalAmount -> "<<totalAmount<<endl;
-        cout<<"borrowAmount -> "<<borrowAmount<<endl;
-        cout<<"description -> "<<description<<endl;
-        cout<<"timeStamp -> "<<timeStamp<<endl;
-        cout<<"payee -> "<<payee<<endl;
-        cout<<"borrower -> "<<borrower<<endl;
-        cout << "***************" << endl;
-    }
+    // void displayExpense(){
+    //     cout<<"id -> "<<id<<endl;
+    //     cout<<"totalAmount -> "<<totalAmount<<endl;
+    //     cout<<"borrowAmount -> "<<borrowAmount<<endl;
+    //     cout<<"description -> "<<description<<endl;
+    //     cout<<"timeStamp -> "<<timeStamp<<endl;
+    //     cout<<"payee -> "<<payee<<endl;
+    //     cout<<"borrower -> "<<borrower<<endl;
+    //     cout << "***************" << endl;
+    // }
 
     void saveToFirebase(){
 
@@ -67,16 +67,19 @@ class IndividualExpense{
     }
 };
 
+
 class Expense{
-    string Expense_Name;
+    string expId;
+    string expenseName;
     double Amount;
     string ExpenseTime;
     string PayeId;
     map<string,double>mp;
 
     public:
-    Expense(string Name,string Time,double Amnt,string Id,map<string,double>&mp){
-        this->Expense_Name=Name;
+    Expense(string id,string Name,string Time,double Amnt,string Id,map<string,double>&mp){
+        this->expId=id;
+        this->expenseName=Name;
         this->ExpenseTime=Time;
         this->Amount=Amnt;
         this->PayeId=Id;
@@ -84,14 +87,33 @@ class Expense{
     }
 
     void splitExpense(){
-        for(auto i:mp)
-        {
-            IndividualExpense exp(Amount,i.second,Expense_Name,ExpenseTime,PayeId,i.first);
-            exp.displayExpense();
+        for(auto i:mp){
+            IndividualExpense exp(Amount,i.second,expenseName,ExpenseTime,PayeId,i.first); 
         }
     }
 };
 
+class Settlement{
+    string settlementId;
+    string payeId;
+    string borrowId;
+    double amount;
+    string description;
+    string timeStamp;
+
+    Settlement(string id,string payeId,string borrowId,double amount,string timeStamp,string description){
+        this->settlementId=id;
+        this->payeId=payeId;
+        this->borrowId=borrowId;
+        this->amount=amount;
+        this->timeStamp=timeStamp;
+        this->description=description;
+    }
+
+    void settleExp(string payeeId,string borrowId,double amount,string timeStamp){
+        // dB updation logic
+    }
+};
 
 int main()
 {
@@ -99,7 +121,7 @@ int main()
     double totalAmnt=300;
     mp["abhi897"]=120;
     mp["yash567"]=100;
-    Expense exp("Night Canteen","23:30",totalAmnt,"suman147",mp);
+    Expense exp("andhr","Night Canteen","23:30",totalAmnt,"suman147",mp);
 
     exp.splitExpense();
     return 0;
