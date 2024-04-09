@@ -54,6 +54,62 @@ class IndividualExpense{
     //     cout << "***************" << endl;
     // }
 
+    // void saveToFirebase(){
+
+    // }
+
+    // void updateExpense(){
+
+    // }
+
+    // ~IndividualExpense(){
+
+    // }
+};
+
+class ExpenseEvent{
+
+    string expId;
+    string expenseName;
+    double amount;
+    string expenseTime;
+    string payeId;
+    map<string,double>mp;
+
+    ExpenseEvent(string id,string Name,string Time,double Amnt,string Id,map<string,double>&mp){
+        this->expId=id;
+        this->expenseName=Name;
+        this->expenseTime=Time;
+        this->amount=Amnt;
+        this->payeId=Id;
+        this->mp=mp;    
+    }
+};
+
+class ExpenseService{
+    string expId;
+    string expenseName;
+    double amount;
+    string expenseTime;
+    string payeId;
+    map<string,double>mp;
+
+    public:
+    ExpenseService(string id,string Name,string Time,double Amnt,string Id,map<string,double>&mp){
+        this->expId=id;
+        this->expenseName=Name;
+        this->expenseTime=Time;
+        this->amount=Amnt;
+        this->payeId=Id;
+        this->mp=mp;    
+    }
+
+    void splitExpense(){
+        for(auto i:mp){
+            IndividualExpense exp(amount,i.second,expenseName,expenseTime,payeId,i.first); 
+        }
+    }
+
     void saveToFirebase(){
 
     }
@@ -62,34 +118,8 @@ class IndividualExpense{
 
     }
 
-    ~IndividualExpense(){
+    void deleteExpense(){
 
-    }
-};
-
-
-class Expense{
-    string expId;
-    string expenseName;
-    double Amount;
-    string ExpenseTime;
-    string PayeId;
-    map<string,double>mp;
-
-    public:
-    Expense(string id,string Name,string Time,double Amnt,string Id,map<string,double>&mp){
-        this->expId=id;
-        this->expenseName=Name;
-        this->ExpenseTime=Time;
-        this->Amount=Amnt;
-        this->PayeId=Id;
-        this->mp=mp;    
-    }
-
-    void splitExpense(){
-        for(auto i:mp){
-            IndividualExpense exp(Amount,i.second,expenseName,ExpenseTime,PayeId,i.first); 
-        }
     }
 };
 
@@ -110,10 +140,11 @@ class Settlement{
         this->description=description;
     }
 
-    void settleExp(string payeeId,string borrowId,double amount,string timeStamp){
+    void settleExp(){
         // dB updation logic
     }
 };
+
 
 int main()
 {
@@ -121,7 +152,7 @@ int main()
     double totalAmnt=300;
     mp["abhi897"]=120;
     mp["yash567"]=100;
-    Expense exp("andhr","Night Canteen","23:30",totalAmnt,"suman147",mp);
+    ExpenseService exp("andhr","Night Canteen","23:30",totalAmnt,"suman147",mp);
 
     exp.splitExpense();
     return 0;

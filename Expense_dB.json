@@ -1,0 +1,122 @@
+[
+    {
+      "id": "1",
+      "description": "Night Canteen",
+      "timestamp": "2018-10-10T10:00:00Z",
+      "paidAmount": 100,
+      "payeeId": "SWDgexU2xeMHItoAA5t8",
+      "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn","amount": 50},
+            {"userId": "SWDgexU2xeMHItoAA5t8","amount": 40},
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2","amount": 10}
+        ]
+    },
+    {
+        "id": "2",
+        "description": "Lunch Meeting",
+        "timestamp": "2019-01-15T12:00:00Z",
+        "paidAmount": 150,
+        "payeeId": "SWDgexU2xeMHItoAA5t8",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 60},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 80},
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2", "amount": 10}
+        ]
+    },
+    {
+        "id": "3",
+        "description": "Coffee Break",
+        "timestamp": "2019-05-20T15:30:00Z",
+        "paidAmount": 50,
+        "payeeId": "Zxx7uULuRgGSOpkyKtpn",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 20},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 20},
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2", "amount": 10}
+        ]
+    },
+    {
+        "id": "4",
+        "description": "Dinner Outing",
+        "timestamp": "2020-03-10T19:00:00Z",
+        "paidAmount": 200,
+        "payeeId": "Zxx7uULuRgGSOpkyKtpn",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 100},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 50},
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2", "amount": 50}
+        ]
+    },
+    {
+        "id": "5",
+        "description": "Movie Night",
+        "timestamp": "2021-07-05T20:00:00Z",
+        "paidAmount": 120,
+        "payeeId": "SWDgexU2xeMHItoAA5t8",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 40},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 70},
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2", "amount": 10}
+        ]
+    },
+    {
+        "id": "6",
+        "description": "Shopping Spree",
+        "timestamp": "2022-04-15T15:00:00Z",
+        "paidAmount": 180,
+        "payeeId": "Zxx7uULuRgGSOpkyKtpn",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 90},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 90}
+        ]
+    },
+    {
+        "id": "7",
+        "description": "Gym Membership",
+        "timestamp": "2023-02-20T17:30:00Z",
+        "paidAmount": 300,
+        "payeeId": "SWDgexU2xeMHItoAA5t8",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 200},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 100}
+        ]
+    },
+    {
+        "id": "8",
+        "description": "Weekend Getaway",
+        "timestamp": "2024-09-08T09:00:00Z",
+        "paidAmount": 400,
+        "payeeId": "Zxx7uULuRgGSOpkyKtpn",
+        "split": [
+            {"userId": "Zxx7uULuRgGSOpkyKtpn", "amount": 250},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 150}
+        ]
+    },
+    {
+        "id": "9",
+        "description": "Kuchh Trip",
+        "timestamp": "2024-03-21T07:00:00Z",
+        "paidAmount": 600,
+        "payeeId": "rvn3tvDdrjOmbFXtw3amoea0H7n2",
+        "split": [
+            {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2", "amount": 350},
+            {"userId": "SWDgexU2xeMHItoAA5t8", "amount": 250}
+        ]
+    },
+    {
+        "id": "10",
+        "description": "C21 Mall",
+        "timestamp": "2022-10-10T11:00:00Z",
+        "paidAmount": 720,
+        "payeeId": "rvn3tvDdrjOmbFXtw3amoea0H7n2",
+        "split": [
+              {"userId": "Zxx7uULuRgGSOpkyKtpn","amount": 200},
+              {"userId": "SWDgexU2xeMHItoAA5t8","amount": 360},
+              {"userId": "rvn3tvDdrjOmbFXtw3amoea0H7n2","amount": 160}
+        ]
+    }
+]
+
+
+
+

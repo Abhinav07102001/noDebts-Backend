@@ -26,9 +26,8 @@ class Event{
     }
 };
 
-
-class Service{
-   int overallExp; 
+class CoverTemplate{
+   int totalExp; 
    vector<IndividualExpense>v1;
    vector<Event>v2;
 };

@@ -1,0 +1,146 @@
+class User {
+  String userId = 'a';
+  int userAmount = 0;
+  String userName = 'a';
+  int userPhone = 89;
+
+  User(String id, String name, int phone) {
+    //Create User
+    this.userId = id;
+    this.userName = name;
+    this.userPhone = phone;
+  }
+  
+  void deleteUser(){
+    
+  }
+  void updateUser() {
+    // Update User Info
+  }
+}
+
+class IndividualExpense {
+  String id = 'a';
+  double totalAmount = 0;
+  double borrowAmount = 0;
+  String description = 'a';
+  String timeStamp = 'a';
+  String payee = 'a';
+  String borrower = 'a';
+
+  IndividualExpense(double totalAmount, double borrowAmount, String description,String timeStamp, String payee, String borrower) {
+    this.id = "abc233";
+    this.totalAmount = totalAmount;
+    this.borrowAmount = borrowAmount;
+    this.description = description;
+    this.timeStamp = timeStamp;
+    this.payee = payee;
+    this.borrower = borrower;
+  }
+  
+  void displayExpense() {
+    print(id);
+    print(totalAmount);
+    print(borrowAmount);
+    print(description);
+    print(timeStamp);
+    print(payee);
+    print(borrower);
+    print('*******');
+  }
+  // void saveToFirebase(){
+
+  // }
+
+  // void updateExpense(){
+
+  // }
+
+  // ~IndividualExpense(){
+
+  // }
+}
+
+
+// Db Schema
+class ExpenseEvent {
+  String expId ="";
+  String expenseName = 'a';
+  double amount = 0;
+  String expenseTime = '0';
+  String payeId = 'a';
+  Map<String, double> mp = {};
+
+  ExpenseEvent(String id, String name, String time, double amnt, String iD, Map<String, double> mp) {
+    this.expId = id;
+    this.expenseName = name;
+    this.expenseTime = time;
+    this.amount = amnt;
+    this.payeId = iD;
+    this.mp = mp;
+  }
+}
+
+class ExpenseService {
+  String expId = 'a';
+  String expenseName = 'a';
+  double amount = 0;
+  String expenseTime = 'a';
+  String payeId = 'a';
+  Map<String, double> mp = {};
+
+  ExpenseService(String id, String name, String time, double amnt, String iD, Map<String, double> mp) {
+    this.expId = id;
+    this.expenseName = name;
+    this.expenseTime = time;
+    this.amount = amnt;
+    this.payeId = id;
+    this.mp = mp;
+  }
+  
+  void addExpense(){
+    
+  }
+  
+  void splitExpense() {
+    mp.forEach((userId, amnt) {
+      IndividualExpense exp = IndividualExpense(
+          amount, amnt, expenseName, expenseTime, payeId, userId);
+      exp.displayExpense();
+    });
+  }
+
+  void saveToFirebase() {}
+
+  void updateExpense() {}
+
+  void deleteExpense() {}
+}
+
+class Settlement {
+  String settlementId = 'a';
+  String payeId = 'a';
+  String borrowId = 'a';
+  double amount = 0;
+  String description = 'a';
+  String timeStamp = 'a';
+
+  Settlement(String id, String payeId, String borrowId, double amount, String timeStamp, String description) {
+    this.settlementId = id;
+    this.payeId = payeId;
+    this.borrowId = borrowId;
+    this.amount = amount;
+    this.timeStamp = timeStamp;
+    this.description = description;
+  }
+
+  void settleExp() {
+    // dB updation logic
+  }
+}
+
+void main() {
+  Map<String, double> mp = {"abhi45": 50, "yash447": 90, "suman357": 100};
+  ExpenseService exp = ExpenseService('a', 'nc', 'time', 500, 'abhi293', mp);
+  exp.splitExpense();
+}
